@@ -1,0 +1,22 @@
+{
+  "name": "docker-todo-app",
+  "version": "1.0.0",
+  "description": "A simple to do app using docker containers",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "test": "node app.js",
+    "dev": "nodemon ./app.js"
+  },
+  "author": "Mike Cann",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.3",
+    "express-static": "^1.2.6",
+    "mongoose": "^6.2.10"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}

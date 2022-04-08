@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docker-Todo</title>
+</head>
+
+<body>
+    <h1>Welcome to the Docker Todo App!</h1>
+
+    <form action="/insert" method="post">
+        <label for="item">Enter an Item</label>
+        <input type="text" name="item">
+        <input type="submit" value="Add Item">
+    </form>
+
+    <h3>Todo List</h2>
+        <ul>
+
+            <% if (typeof listItems=='object' && listItems) { %>
+                <% listItems.forEach(function(item) { %>
+                    <li>
+                        <%= item.name %>
+
+                    </li>
+                    <% }) %>
+                        <% } %>
+        </ul>
+        <form action="/deleteList" method="post">
+            <input type="submit" value="Clear List">
+        </form>
+</body>
+
+</html>
